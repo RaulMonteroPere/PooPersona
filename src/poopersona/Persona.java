@@ -6,7 +6,7 @@ public class Persona {
     private String nombre;
     private String dni;
     private String direccion;
-    private int edad;
+    private int edad;   
 
     public Persona(String nombre, String dni, String direccion, int edad) {
         this.nombre = nombre;
@@ -46,10 +46,10 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
+    
     
     public String consultaPersona() {
         return "Persona{" + "nombre=" + nombre + ", dni=" + dni + ", direccion=" + direccion + ", edad=" + edad + '}';
-    }
-    
+    } 
+
 }
