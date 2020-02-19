@@ -15,6 +15,8 @@ public class Prueba {
         System.out.println(p3.consultaPersona());
         Persona p4=new Persona("Cristina", "98877665X", "Plaza nomeacuerdo 13", 25);
         System.out.println(p4.consultaPersona());
+        Persona p5 =new Persona("Lorena", "50154154S", "C/EStocolmo,54", 45, 28040, "Sevilla", "Pescar");
+        System.out.println(p5.consultaCompletaPersona());
     }
     
 }
