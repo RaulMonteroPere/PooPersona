@@ -17,6 +17,15 @@ public class Prueba {
         System.out.println(p4.consultaPersona());
         Persona p5 =new Persona("Lorena", "50154154S", "C/EStocolmo,54", 45, 28040, "Sevilla", "Pescar");
         System.out.println(p5.consultaCompletaPersona());
+        
+        //Creo una nueva perosona
+        Persona pers6 = new Persona("Jaime", "01234567T", "Calle Madrid, 27", 33);
+        System.out.println(pers6.consultaPersona()); //llamo al método y consulto la persona creada
+        
+        //Creo otra perosona
+        Persona pers7 = new Persona("Antonio", "04223569Z", "Calle Sol, 2", 33, 28002, "Madrid", "Cantautor");
+        System.out.println(pers7.consultaCompletaPersona());//llamo al método restante y compruebo los datos de esa persona
+        
     }
     
 }

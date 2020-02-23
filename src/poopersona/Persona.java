@@ -96,10 +96,10 @@ public class Persona {
 	 */
 	
 	public String consultaPersona() {
-        return "Persona{" + "nombre=" + nombre + ", dni=" + dni + ", direccion=" + direccion + ", edad=" + edad + '}';
+        return "Persona{" + "nombre. " + nombre + ", dni: " + dni + ", direccion: " + direccion + ", edad: " + edad + '}';
     }
     
 	public String consultaCompletaPersona() {
-		return "Persona{" + "nombre=" + nombre + ", dni=" + dni + ", direccion=" + direccion + ", Código Postal: " + codigo_postal + ", Ciudad:  " + ciudad +  ",  edad=" + edad + ", Aficiones: " + aficiones + '}';
+		return "Persona{" + "nombre: " + nombre + ", dni: " + dni + ", direccion: " + direccion + ", Codigo Postal: " + codigo_postal + ", Ciudad:  " + ciudad +  ",  edad: " + edad + ", Aficiones: " + aficiones + '}';
 	}
 }
