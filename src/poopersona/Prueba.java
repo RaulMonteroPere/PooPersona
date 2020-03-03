@@ -40,6 +40,7 @@ public class Prueba {
         for(Persona per:persona){
             System.out.println(per.consultaCompletaPersona());
         }
+        System.out.println("--------------------------------------ORDENADO CON EL MÉTODO DIFICIL---------");
         System.out.println("Ordenado por nombre---------------------------------------------------------");
         Collections.sort(persona,new Comparator<Persona>(){
         @Override
@@ -51,15 +52,17 @@ public class Prueba {
         for(Persona per:persona){
             System.out.println(per.consultaCompletaPersona());
         }
+        
+
         System.out.println("Ordenado por edad---------------------------------------------------------");
         Collections.sort(persona,new Comparator<Persona>(){
         @Override
         public int compare(Persona p10,Persona p20){
             if(p10.getEdad()>p20.getEdad()){
                 return 1;}
-            if(p10.getEdad()<p20.getEdad()){
+            else if(p10.getEdad()<p20.getEdad()){
                         return -1;}
-                         return 0;
+             else            return 0;
                         }
             
             
@@ -68,6 +71,19 @@ public class Prueba {
         for(Persona per:persona){
             System.out.println(per.consultaCompletaPersona());
         }
+    System.out.println("--------------------------------------ORDENADO CON EL MÉTODO FÁCIL---------");
+    System.out.println("--------------------------------------por edad---------");
+    Collections.sort(persona,(p10,p20)->
+            p10.getEdad()-p20.getEdad());
+    for(Persona per:persona){
+            System.out.println(per.consultaCompletaPersona());
+        }
+    System.out.println("--------------------------------------por nombre---------");
+     Collections.sort(persona,(p30,p40)->
+            ((int)p30.getNombre().charAt(0)-(int)p40.getNombre().charAt(0)));
+    for(Persona per:persona){
+            System.out.println(per.consultaCompletaPersona());
+        }       
     }
     
 }
