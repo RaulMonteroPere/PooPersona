@@ -1,11 +1,16 @@
 
 package poopersona;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 
 public class Prueba {
 
     
     public static void main(String[] args) {
+        ArrayList<Persona> persona= new ArrayList<Persona>();
         Persona p1=new Persona("Raul", "50148147J", "C/Cardenal Cisneros,23", 37);
         System.out.println(p1.consultaPersona());
         Persona p2=new Persona("Pedro", "50148147J", "C/Cardenal Cisneros,23", 37);
@@ -20,12 +25,49 @@ public class Prueba {
         
         //Creo una nueva perosona
         Persona pers6 = new Persona("Jaime", "01234567T", "Calle Madrid, 27", 33);
-        System.out.println(pers6.consultaPersona()); //llamo al método y consulto la persona creada
+        System.out.println(pers6.consultaPersona()); //llamo al mï¿½todo y consulto la persona creada
         
         //Creo otra perosona
         Persona pers7 = new Persona("Antonio", "04223569Z", "Calle Sol, 2", 33, 28002, "Madrid", "Cantautor");
-        System.out.println(pers7.consultaCompletaPersona());//llamo al método restante y compruebo los datos de esa persona
+        System.out.println(pers7.consultaCompletaPersona());//llamo al mï¿½todo restante y compruebo los datos de esa persona
+        persona.add(p1);
+        persona.add(p2);
+        persona.add(p3);
+        persona.add(p4);
+        persona.add(p5);
+        persona.add(pers6);
+        persona.add(pers7);
+        for(Persona per:persona){
+            System.out.println(per.consultaCompletaPersona());
+        }
+        System.out.println("Ordenado por nombre---------------------------------------------------------");
+        Collections.sort(persona,new Comparator<Persona>(){
+        @Override
+        public int compare(Persona p10,Persona p20){
+            return p10.getNombre().compareTo(p20.getNombre());
+            
+        }
+    });
+        for(Persona per:persona){
+            System.out.println(per.consultaCompletaPersona());
+        }
+        System.out.println("Ordenado por edad---------------------------------------------------------");
+        Collections.sort(persona,new Comparator<Persona>(){
+        @Override
+        public int compare(Persona p10,Persona p20){
+            if(p10.getEdad()>p20.getEdad()){
+                return 1;}
+            if(p10.getEdad()<p20.getEdad()){
+                        return -1;}
+                         return 0;
+                        }
+            
+            
         
+    });
+        for(Persona per:persona){
+            System.out.println(per.consultaCompletaPersona());
+        }
     }
     
 }

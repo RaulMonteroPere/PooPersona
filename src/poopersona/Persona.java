@@ -94,7 +94,15 @@ public class Persona {
 	/*
 	 * Métodos
 	 */
-	
+    /*@Override
+	public int compareTo(Persona p){
+            if(p.getEdad()>edad){
+                return -1;
+            }
+            else if(p.getEdad()==edad){
+                return 0;
+        }else return 1;
+        }*/
 	public String consultaPersona() {
         return "Persona{" + "nombre. " + nombre + ", dni: " + dni + ", direccion: " + direccion + ", edad: " + edad + '}';
     }
